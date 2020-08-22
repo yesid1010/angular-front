@@ -44,16 +44,17 @@ export class PersonasComponent implements OnInit {
 
   }
 
-  addPersona(){
-    this.persona.nombres = "yesid";
-    this.persona.apellidos = "sanchez"
-    this.persona.correo = "yesid@gmail.com"
-    this.persona.telefono = "454545"
-    this.persona.direccion = "yesidss"
-    
+  addPersona(){ 
     this.service.addPerson(this.persona).subscribe(data=>{
       console.log(data);
       this.getPersonas()
+    })
+  }
+
+  update(){
+    this.service.updatePerson(this.persona).subscribe(data => {
+      console.log(data);
+      this.getPersonas();
     })
   }
 }
