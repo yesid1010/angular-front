@@ -5,12 +5,14 @@ import {FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import { PersonasComponent } from './pages/personas/personas.component'
+import { PersonasComponent } from './pages/personas/personas.component';
+import { FormComponent } from './components/form/form.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonasComponent
+    PersonasComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

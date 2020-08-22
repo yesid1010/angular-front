@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Persona } from '../persona';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class ApilaravelService {
   constructor(private http:HttpClient) { }
 
   getPersonas(){
-    return this.http.get<Persona>(this.URL);
+    return this.http.get(this.URL);
   }
 
   getPersona(id){
